@@ -19,23 +19,19 @@ public class Management {
     private DijkstraShortestPath<Vertex<Point>, Edge> alg;
 
     // creamos vertices
-    private Vertex<Point> London;
-    private Vertex<Point> Dover;
-    private Vertex<Point> Southampton;
-    private Vertex<Point> Plymouth;
-    private Vertex<Point> Cardiff;
-    private Vertex<Point> Swansea;
-    private Vertex<Point> Birmingham;
-    private Vertex<Point> Cambridge;
-    private Vertex<Point> Felixstowe;
-    private Vertex<Point> Sheffield;
-    private Vertex<Point> Liverpool;
-    private Vertex<Point> Manchester;
-    private Vertex<Point> Grimsby;
-    private Vertex<Point> Node1;
-    private Vertex<Point> Node2;
-    private Vertex<Point> Node3;
-    private Vertex<Point> Node4;
+    private Vertex<Point> Medellin;
+    private Vertex<Point> Bogota;
+    private Vertex<Point> Cali;
+    private Vertex<Point> Cartagena;
+    private Vertex<Point> Barranquilla;
+    private Vertex<Point> Bucaramanga;
+    private Vertex<Point> Cucuta;
+    private Vertex<Point> Pereira;
+    private Vertex<Point> SantaMarta;
+    private Vertex<Point> Villavicencio;
+    private Vertex<Point> Manizales;
+    private Vertex<Point> Pasto;
+    private Vertex<Point> Buenaventura;
 
     private int seleccion, seleccion2;
 
@@ -47,47 +43,35 @@ public class Management {
         graph = new SparseMultigraph<Vertex<Point>, Edge>();
 
         // damos info a los vertices
-        London = new Vertex<Point>(new Point("London"));
-        Dover = new Vertex<Point>(new Point("Dover"));
-        Southampton = new Vertex<Point>(new Point("Southampton"));
-        Plymouth = new Vertex<Point>(new Point("Plymouth"));
-        Cardiff = new Vertex<Point>(new Point("Cardiff"));
-        Swansea = new Vertex<Point>(new Point("Swansea"));
-        Birmingham = new Vertex<Point>(new Point("Birmingham"));
-        Cambridge = new Vertex<Point>(new Point("Cambridge"));
-        Felixstowe = new Vertex<Point>(new Point("Felixstowe"));
-        Sheffield = new Vertex<Point>(new Point("Sheffield"));
-        Liverpool = new Vertex<Point>(new Point("Liverpool"));
-        Manchester = new Vertex<Point>(new Point("Manchester"));
-        Grimsby = new Vertex<Point>(new Point("Grimsby"));
-        Node1 = new Vertex<Point>(new Point("Node1"));
-        Node2 = new Vertex<Point>(new Point("Node2"));
-        Node3 = new Vertex<Point>(new Point("Node3"));
-        Node4 = new Vertex<Point>(new Point("Node4"));
+        Medellin = new Vertex<Point>(new Point("Medellin"));
+        Bogota = new Vertex<Point>(new Point("Bogota"));
+        Cali = new Vertex<Point>(new Point("Cali"));
+        Cartagena = new Vertex<Point>(new Point("Cartagena"));
+        Barranquilla = new Vertex<Point>(new Point("Barranquilla"));
+        Bucaramanga = new Vertex<Point>(new Point("Bucaramanga"));
+        Cucuta = new Vertex<Point>(new Point("Cucuta"));
+        Pereira = new Vertex<Point>(new Point("Pereira"));
+        SantaMarta = new Vertex<Point>(new Point("Santa Marta"));
+        Villavicencio = new Vertex<Point>(new Point("Villavicencio"));
+        Manizales = new Vertex<Point>(new Point("Manizales"));
+        Pasto = new Vertex<Point>(new Point("Pasto"));
+        Buenaventura = new Vertex<Point>(new Point("Buenaventura"));
 
-        graph.addEdge(new Edge(123, "London", "Dover"), London, Dover);
-        graph.addEdge(new Edge(150, "London", "Felixstowe"), London, Felixstowe);
-        graph.addEdge(new Edge(100, "London", "Cambridge"), London, Cambridge);
-        graph.addEdge(new Edge(128, "London", "Southampton"), London, Southampton);
-        graph.addEdge(new Edge(215, "London", "Node2"), London, Node2);
-        graph.addEdge(new Edge(150, "London", "Node4"), London, Node3);
-        graph.addEdge(new Edge(50, "Node3", "Birmingham"), Node3, Birmingham);
-        graph.addEdge(new Edge(115, "Node3", "Cambridge"), Node3, Cambridge);
-        graph.addEdge(new Edge(130, "Node3", "Sheffield"), Node3, Sheffield);
-        graph.addEdge(new Edge(60, "Sheffield", "Node4"), Sheffield, Node4);
-        graph.addEdge(new Edge(55, "Node4", "Grimsby"), Node4, Grimsby);
-        graph.addEdge(new Edge(270, "Node4", "Cambridge"), Node4, Cambridge);
-        graph.addEdge(new Edge(115, "Cambridge", "Felixstowe"), Cambridge, Felixstowe);
-        graph.addEdge(new Edge(110, "Sheffield", "Manchester"), Sheffield, Manchester);
-        graph.addEdge(new Edge(60, "Manchester", "Liverpool"), Manchester, Liverpool);
-        graph.addEdge(new Edge(165, "Birmingham", "Liverpool"), Birmingham, Liverpool);
-        graph.addEdge(new Edge(160, "Birmingham", "Node2"), Birmingham, Node2);
-        graph.addEdge(new Edge(75, "Node2", "Cardiff"), Node2, Cardiff);
-        graph.addEdge(new Edge(70, "Cardiff", "Swansea"), Cardiff, Swansea);
-        graph.addEdge(new Edge(108, "Node2", "Node1"), Node2, Node1);
-        graph.addEdge(new Edge(70, "Node1", "Plymouth"), Node1, Plymouth);
-        graph.addEdge(new Edge(330, "Node1", "Southampton"), Node1, Southampton);
-        graph.addEdge(new Edge(220, "Southampton", "Dover"), Southampton, Dover);
+        graph.addEdge(new Edge(509, "Bogota", "Medellin"), Bogota, Medellin);
+        graph.addEdge(new Edge(466, "Bogota", "Cali"), Bogota, Cali);
+        graph.addEdge(new Edge(124, "Bogota", "Villavicencio"), Bogota, Villavicencio);
+        graph.addEdge(new Edge(871, "Medellin", "Barranquilla"), Medellin, Barranquilla);
+        graph.addEdge(new Edge(640, "Medellin", "Cartagena"), Medellin, Cartagena);
+        graph.addEdge(new Edge(212, "Medellin", "Pereira"), Medellin, Pereira);
+        graph.addEdge(new Edge(199, "Bucaramanga", "Cucuta"), Bucaramanga, Cucuta);
+        graph.addEdge(new Edge(884, "Cali", "Pasto"), Cali, Pasto);
+        graph.addEdge(new Edge(214, "Pereira", "Cali"), Pereira, Cali);
+        graph.addEdge(new Edge(52, "Pereira", "Manizales"), Pereira, Manizales);
+        graph.addEdge(new Edge(162, "Cali", "Buenaventura"), Cali, Buenaventura);
+        graph.addEdge(new Edge(122, "Cartagena", "Barranquilla"), Cartagena, Barranquilla);
+        graph.addEdge(new Edge(505, "Buenaventura", "Bogota"), Buenaventura, Bogota);
+        graph.addEdge(new Edge(398, "Bucaramanga", "Bogota"), Bucaramanga, Bogota);
+        graph.addEdge(new Edge(266, "Santa Marta", "Cartagena"), SantaMarta, Cartagena);
         // Algortimo de Dijkstra
         Transformer<Edge, Double> wtTransformer = new Transformer<Edge, Double>() {
             public Double transform(Edge link) {
@@ -97,7 +81,7 @@ public class Management {
 
         alg = new DijkstraShortestPath(graph, wtTransformer);
 
-        Collection<Vertex<Point>> coleccion = graph.getNeighbors(London);
+        Collection<Vertex<Point>> coleccion = graph.getNeighbors(Bogota);
 
         coleccion = graph.getVertices();
 
@@ -111,7 +95,7 @@ public class Management {
 
         JOptionPane.showMessageDialog(null, msm);
 
-        Collection<Edge> edgeColelction = graph.getInEdges(London);
+        Collection<Edge> edgeColelction = graph.getInEdges(Bogota);
         System.err.println("-------------------------");
 
         edgeColelction = graph.getEdges();
@@ -128,125 +112,71 @@ public class Management {
 
         System.err.println("-------------------------");
 
-
         do {
 
             System.out.println("Seleccion de ciudad de origen");
 
             seleccion = JOptionPane.showOptionDialog(null, "Seleccione una Ciudad de salida", "Seleccion Origen",
                     JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null,
-                    new Object[]{"London", "Dover", "Felixstowe", "Cambridge", "Southampton", "Plymouth", "Cardiff", "Swansea", "Birmingham", "Liverpool", "Manchester", "Sheffield", "Grimsby", "salir"}, "opcion 1");
+                    new Object[]{"Bogota", "Medellin", "Cali", "Cartagena", "Barranquilla", "Bucaramanga", "Cucuta", "Pereira", "Santa Marta", "Villavicencio", "Manizales", "Pasto", "Buenaventura", "salir"}, "opcion 1");
             switch (seleccion) {
 
                 case 0:
-
-                    System.out.println("selecciono " + (seleccion) + " London");
-
-                    subMenu(London);
-
+                    System.out.println("selecciono " + (seleccion) + " Bogota");
+                    subMenu(Bogota);
                     break;
-
                 case 1:
-
-                    System.out.println("selecciono " + (seleccion) + " Dover");
-
-                    subMenu(Dover);
-
+                    System.out.println("selecciono " + (seleccion) + " Medellin");
+                    subMenu(Medellin);
                     break;
-
                 case 2:
-
-                    System.out.println("selecciono " + (seleccion) + " Felixstowe");
-
-                    subMenu(Felixstowe);
-
+                    System.out.println("selecciono " + (seleccion) + " Cali");
+                    subMenu(Cali);
                     break;
-
                 case 3:
-
-                    System.out.println("selecciono " + (seleccion) + " Cambridge");
-
-                    subMenu(Cambridge);
-
+                    System.out.println("selecciono " + (seleccion) + " Cartagena");
+                    subMenu(Cartagena);
                     break;
                 case 4:
-
-                    System.out.println("selecciono " + (seleccion) + " Southampton");
-
-                    subMenu(Southampton);
-
+                    System.out.println("selecciono " + (seleccion) + " Barranquilla");
+                    subMenu(Barranquilla);
                     break;
-
                 case 5:
-
-                    System.out.println("selecciono " + (seleccion) + " Plymouth");
-
-                    subMenu(Plymouth);
-
+                    System.out.println("selecciono " + (seleccion) + " Bucaramanga");
+                    subMenu(Bucaramanga);
                     break;
-
                 case 6:
-
-                    System.out.println("selecciono " + (seleccion) + " Cardiff");
-
-                    subMenu(Cardiff);
-
+                    System.out.println("selecciono " + (seleccion) + " Cucuta");
+                    subMenu(Cucuta);
                     break;
-
                 case 7:
-
-                    System.out.println("selecciono " + (seleccion) + " Swansea");
-
-                    subMenu(Swansea);
-
+                    System.out.println("selecciono " + (seleccion) + " Pereira");
+                    subMenu(Pereira);
                     break;
-
                 case 8:
-
-                    System.out.println("selecciono " + (seleccion) + " Birmingham");
-
-                    subMenu(Birmingham);
-
+                    System.out.println("selecciono " + (seleccion) + " Santa Marta");
+                    subMenu(SantaMarta);
                     break;
-
                 case 9:
-
-                    System.out.println("selecciono " + (seleccion) + " Liverpool");
-
-                    subMenu(Liverpool);
-
+                    System.out.println("selecciono " + (seleccion) + " Villavicencio");
+                    subMenu(Villavicencio);
                     break;
 
                 case 10:
-
-                    System.out.println("selecciono " + (seleccion) + " Manchester");
-
-                    subMenu(Manchester);
-
+                    System.out.println("selecciono " + (seleccion) + " Manizales");
+                    subMenu(Manizales);
                     break;
                 case 11:
-
-                    System.out.println("selecciono " + (seleccion) + " Sheffield");
-
-                    subMenu(Sheffield);
-
+                    System.out.println("selecciono " + (seleccion) + " Pasto");
+                    subMenu(Pasto);
                     break;
-
                 case 12:
-
-                    System.out.println("selecciono " + (seleccion) + " Grimsby");
-
-                    subMenu(Grimsby);
-
+                    System.out.println("selecciono " + (seleccion) + " Buenaventura");
+                    subMenu(Buenaventura);
                     break;
-
                 case 13:
-
                     System.out.println("selecciono " + (seleccion) + " Salida");
-
                     int op = JOptionPane.showConfirmDialog(null, "�Esta seguro de salir?", "Alerta!", JOptionPane.YES_NO_OPTION);
-
-
                     if (op == 1) {
                         seleccion = 14;
                     }
@@ -270,115 +200,63 @@ public class Management {
 
             seleccion2 = JOptionPane.showOptionDialog(null, "Seleccione una Ciudad de Destino", "Seleccion Destino",
                     JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null,
-                    new Object[]{"London", "Dover", "Felixstowe", "Cambridge", "Southampton", "Plymouth", "Cardiff", "Swansea", "Birmingham", "Liverpool", "Manchester", "Sheffield", "Grimsby", "Volver"}, "opcion 1");
+                    new Object[]{"Bogota", "Medellin", "Cali", "Cartagena", "Barranquilla", "Bucaramanga", "Cucuta", "Pereira", "Santa Marta", "Villavicencio", "Manizales", "Pasto", "Buenaventura", "Volver"}, "opcion 1");
             switch (seleccion2) {
 
                 case 0:
-
-                    System.out.println("selecciono " + (seleccion2) + " London");
-
-                    way(origin, London);
-
+                    System.out.println("selecciono " + (seleccion2) + " Bogota");
+                    way(origin, Bogota);
                     break;
-
                 case 1:
-
-                    System.out.println("selecciono " + (seleccion2) + " Dover");
-
-                    way(origin, Dover);
-
+                    System.out.println("selecciono " + (seleccion2) + " Medellin");
+                    way(origin, Medellin);
                     break;
-
                 case 2:
-
-                    System.out.println("selecciono " + (seleccion2) + " Felixstowe");
-
-                    way(origin, Felixstowe);
-
+                    System.out.println("selecciono " + (seleccion2) + " Cali");
+                    way(origin, Cali);
                     break;
-
                 case 3:
-
-                    System.out.println("selecciono " + (seleccion2) + " Cambridge");
-
-                    way(origin, Cambridge);
-
+                    System.out.println("selecciono " + (seleccion2) + " Cartagena");
+                    way(origin, Cartagena);
                     break;
                 case 4:
-
-                    System.out.println("selecciono " + (seleccion2) + " Southampton");
-
-                    way(origin, Southampton);
-
+                    System.out.println("selecciono " + (seleccion2) + " Barranquilla");
+                    way(origin, Barranquilla);
                     break;
-
                 case 5:
-
-                    System.out.println("selecciono " + (seleccion2) + " Plymouth");
-
-                    way(origin, Plymouth);
-
+                    System.out.println("selecciono " + (seleccion2) + " Bucaramanga");
+                    way(origin, Bucaramanga);
                     break;
-
                 case 6:
-
-                    System.out.println("selecciono " + (seleccion2) + " Cardiff");
-
-                    way(origin, Cardiff);
-
+                    System.out.println("selecciono " + (seleccion2) + " Cucuta");
+                    way(origin, Cucuta);
                     break;
-
                 case 7:
-
-                    System.out.println("selecciono " + (seleccion2) + " Swansea");
-
-                    way(origin, Swansea);
-
+                    System.out.println("selecciono " + (seleccion2) + " Pereira");
+                    way(origin, Pereira);
                     break;
-
                 case 8:
-
-                    System.out.println("selecciono " + (seleccion2) + " Birmingham");
-
-                    way(origin, Birmingham);
-
+                    System.out.println("selecciono " + (seleccion2) + " Santa Marta");
+                    way(origin, SantaMarta);
                     break;
-
                 case 9:
-
-                    System.out.println("selecciono " + (seleccion2) + " Liverpool");
-
-                    way(origin, Liverpool);
-
+                    System.out.println("selecciono " + (seleccion2) + " Villavicencio");
+                    way(origin, Villavicencio);
                     break;
-
                 case 10:
-
-                    System.out.println("selecciono " + (seleccion2) + " Manchester");
-
-                    way(origin, Manchester);
-
+                    System.out.println("selecciono " + (seleccion2) + " Manizales");
+                    way(origin, Manizales);
                     break;
                 case 11:
-
-                    System.out.println("selecciono " + (seleccion2) + " Sheffield");
-
-                    way(origin, Sheffield);
-
+                    System.out.println("selecciono " + (seleccion2) + " Pasto");
+                    way(origin, Pasto);
                     break;
-
                 case 12:
-
-                    System.out.println("selecciono " + (seleccion2) + " Grimsby");
-
-                    way(origin, Grimsby);
-
+                    System.out.println("selecciono " + (seleccion2) + " Buenaventura");
+                    way(origin, Buenaventura);
                     break;
-
                 case 13:
-
                     System.out.println("selecciono " + (seleccion2) + " Volver");
-
                     break;
             }
         }
